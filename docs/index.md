@@ -1,0 +1,23 @@
+# Meet R1Bot
+
+![r1b_landscape](assets/images/r1b_landscape.jpg)
+
+## Project Overview
+
+**R1B(ot)** is an open-source mobile robot platform designed for educational purposes. It features a differential drive system, runs on an **Raspberry Pi Pico** using **MicroPython**. It is designed to be easily 3D printed with easily accessible off-the-shelf parts.
+
+The goal of this project is to provide a low-cost, accessible platform for learning **mechanics**, **electronics**, **kinematics**, and **control theory**.
+
+---
+
+## Key Specifications
+
+| Features | Details |
+| :--- | :--- |
+| **Dimensions** | 150mm x 120mm x 80mm |
+| **Microcontroller** | Raspberry Pi Pico 2 (RP2350) |
+| **Firmware** | MicroPython v1.26.1 |
+| **Actuators** | 2x N20 Gear Motors (6V) |
+| **Sensors** | HC-SR04 (Ultrasonic), Hall-Effect encoders |
+| **CAD Software** | FreeCAD 1.0.2 |
+| **PCB Design** | KiCad 9.0.6 |
