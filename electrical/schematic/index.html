@@ -23,7 +23,7 @@
     
     
       
-        <title>Schematic - R1B(ot) Docs</title>
+        <title>Motor Control (Pico Carrier) Board Schematic - R1B(ot) Docs</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#motor-control-pico-carrier-board-schematic" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Schematic
+              Motor Control (Pico Carrier) Board Schematic
             
           </span>
         </div>
@@ -486,6 +491,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor Control (Pico Carrier) Board Schematic
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -494,7 +519,7 @@
   <span class="md-ellipsis">
     
   
-    Schematic
+    Motor Control (Pico Carrier) Board Schematic
   
 
     
@@ -503,6 +528,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pico-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pico Wiring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-and-motor-driver-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor and Motor Driver Wiring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-and-peripherals-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance Sensor and Peripherals Wiring
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -791,6 +890,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pico-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pico Wiring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-and-motor-driver-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor and Motor Driver Wiring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-and-peripherals-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance Sensor and Peripherals Wiring
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -807,9 +971,44 @@
 
 
 
-  <h1>Schematic</h1>
-
-
+<h1 id="motor-control-pico-carrier-board-schematic">Motor Control (Pico Carrier) Board Schematic</h1>
+<h2 id="overview">Overview</h2>
+<p>The motor control board (MCB) hosts following components and peripherals:</p>
+<ul>
+<li>Raspberry Pi Pico,</li>
+<li>Pololu TB6612FNG dual motor driver carrier</li>
+<li>E-S N20 geared DC motors and encoders</li>
+<li>HC-SR04 ultrasonic distance sensor</li>
+<li>Common cathode RGB LED</li>
+<li>Pull-up resistor for Pico</li>
+<li>Pull-down resistor for Pico</li>
+</ul>
+<h2 id="power-management">Power Management</h2>
+<p>The MCB receives two sources of DC power and supply them to the components on board.</p>
+<ol>
+<li>7.4V (nominal) for Pololu TB6612FNG motor driver carrier.</li>
+<li>5V for Raspberry Pi Pico (optional), HC-SR04 distance sensor, motor encoders.</li>
+</ol>
+<h2 id="pico-wiring">Pico Wiring</h2>
+<ul>
+<li><code>J8</code> is the 5V input connected to the power expansion board (PEB).</li>
+<li><code>SW3</code> is a switch for Pico to select power sources (<code>off</code>: USB, <code>on</code>: PEB)</li>
+<li><code>J10</code> provides extra connections to unoccupied GPIOs.</li>
+</ul>
+<p><img alt="schematic-pico" src="../assets/images/schematic-pico.png" /></p>
+<h2 id="motor-and-motor-driver-wiring">Motor and Motor Driver Wiring</h2>
+<ul>
+<li><code>J4</code> (MOT_POW) serves 7.4V (nominal) DC to power Pololu TB6612FNG motor driver carrier.</li>
+<li><code>J2</code> and <code>J3</code> provides connections for right and left motor.
+<img alt="schematic-motor" src="../assets/images/schematic-motor.png" /></li>
+</ul>
+<h2 id="distance-sensor-and-peripherals-wiring">Distance Sensor and Peripherals Wiring</h2>
+<ul>
+<li><code>SW1</code> needs to be configured to <code>PULLUP</code>, and SW2 needs to be configured to <code>PULLDOWN</code>.
+Both are debounced.</li>
+<li><code>ECHO</code> signal from HC-SR04 is 5V, so <code>R6</code> and <code>R7</code> are used to level the voltage down to around 3.3V.</li>
+</ul>
+<p><img alt="schematic-peripheral" src="../assets/images/schematic-peripheral.png" /></p>
 
 
 
