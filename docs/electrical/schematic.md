@@ -14,7 +14,7 @@ The motor control board (MCB) hosts following components and peripherals:
 
 ## Power Management
 
-The MCB receives two sources of DC power and supply them to the components on board.
+The MCB receives two sources of DC power and supply them to the components on the board.
 
 1. 7.4V (nominal) for Pololu TB6612FNG motor driver carrier.
 2. 5V for Raspberry Pi Pico (optional), HC-SR04 distance sensor, motor encoders.
@@ -34,6 +34,7 @@ The MCB receives two sources of DC power and supply them to the components on bo
 ![schematic-motor](assets/images/schematic-motor.png)
 
 ## Distance Sensor and Peripherals Wiring
+
 - `SW1` needs to be configured to `PULLUP`, and SW2 needs to be configured to `PULLDOWN`.
 Both are debounced.
 - `ECHO` signal from HC-SR04 is 5V, so `R6` and `R7` are used to level the voltage down to around 3.3V.
